@@ -1,0 +1,26 @@
+﻿@model ST10318273_PROG6212_Part1.Models.Claim
+
+<h2>Create Claim</h2>
+
+<form asp-action="Create" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label asp-for="LecturerName" class="control-label"></label>
+        <input asp-for="LecturerName" class="form-control" />
+        <span asp-validation-for="LecturerName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ClaimDate" class="control-label"></label>
+        <input asp-for="ClaimDate" class="form-control" type="date" />
+        <span asp-validation-for="ClaimDate" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="TotalAmount" class="control-label"></label>
+        <input asp-for="TotalAmount" class="form-control" type="number" step="0.01" />
+        <span asp-validation-for="TotalAmount" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="SupportingDocuments">Upload Supporting Documents</label>
+        <input type="file" name="supportingDocuments" multiple />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit Claim</button>
+</form>

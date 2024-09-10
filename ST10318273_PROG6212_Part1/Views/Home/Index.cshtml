@@ -1,0 +1,116 @@
+﻿@{
+    ViewData["Title"] = "Contract Monthly Claim System";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <style>
+        .container {
+            margin-top: 20px;
+        }
+
+        .card {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Contract Monthly Claim System</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Submit Claim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Claims List</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main" class="container">
+        <h1 class="mt-4">Welcome to the Contract Monthly Claim System</h1>
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">Submit a New Claim</h5>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <label for="lecturerName">Lecturer Name</label>
+                        <input type="text" class="form-control" id="lecturerName" placeholder="Enter lecturer name" />
+                    </div>
+                    <div class="form-group">
+                        <label for="claimDate">Claim Date</label>
+                        <input type="date" class="form-control" id="claimDate" />
+                    </div>
+                    <div class="form-group">
+                        <label for="totalAmount">Total Amount</label>
+                        <input type="number" class="form-control" id="totalAmount" placeholder="Enter total amount" />
+                    </div>
+                    <div class="form-group">
+                        <label for="supportingDocuments">Upload Supporting Documents</label>
+                        <input type="file" class="form-control-file" id="supportingDocuments" multiple />
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Claim</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">Claims List</h5>
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Lecturer Name</th>
+                            <th>Claim Date</th>
+                            <th>Total Amount</th>
+                            <th>Status</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Example row for demonstration -->
+                        <tr>
+                            <td>1</td>
+                            <td>John Doe</td>
+                            <td>2024-09-01</td>
+                            <td>$500.00</td>
+                            <td>Submitted</td>
+                            <td><a href="#" class="btn btn-info">View Details</a></td>
+                        </tr>
+                        <!-- Add more rows as needed -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+            <p class="text-muted">&copy; 2024 Contract Monthly Claim System</p>
+        </div>
+    </footer>
+
+    <!-- Include jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm//core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

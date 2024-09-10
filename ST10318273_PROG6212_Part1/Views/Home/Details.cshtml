@@ -1,0 +1,14 @@
+﻿@model ST10318273_PROG6212_Part1.Models.Claim
+
+<h2>Claim Details</h2>
+
+<dl class="row">
+    <dt class="col-sm-2">Lecturer Name</dt>
+    <dd class="col-sm-10">@Model.LecturerName</dd>
+    <dt class="col-sm-2">Claim Date</dt>
+    <dd class="col-sm-10">@Model.ClaimDate.ToShortDateString()</dd>
+    <dt class="col-sm-2">Total Amount</dt>
+    <dd class="col-sm-10">@Model.TotalAmount.ToString("C")</dd>
+    <dt class="col-sm-2">Status</dt>
+    <dd class="col-sm-10">@Model.Status</dd>
+</dl>
